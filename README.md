@@ -21,8 +21,9 @@ and display them in **OBS Browser Source** with persistent local storage.
 
 ## 📁 Project Structure
 
-.
-├── 1.py            # ⭐ 主入口（唯一）
+<pre>
+CS2-GSI-Python/
+├── 1.py                            # ⭐ Main entry (only one)
 ├── LICENSE
 ├── README.md
 ├── gamestate.py
@@ -30,10 +31,11 @@ and display them in **OBS Browser Source** with persistent local storage.
 ├── information.py
 ├── payloadparser.py
 ├── server.py
-├── templates
-│   └── index.html    # OBS display page
-│   └── stats.html    # OBS 浏览器源
-└── README.md
+└── templates
+    ├── index.html                  # OBS display page
+    └── stats.html                  # OBS browser source
+</pre>
+
 
 ## 🚀 Getting Started
 
@@ -49,7 +51,7 @@ and display them in **OBS Browser Source** with persistent local storage.
 pip install flask flask-socketio flask-cors
 
 3. Run the server
-python app.py
+python 1.py
 
 The server will listen on:
 http://127.0.0.1:3000
