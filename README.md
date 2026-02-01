@@ -1,3 +1,4 @@
+markdown
 # CS2 GSI OBS Kill Counter
 
 Track **daily CT kills & headshots** from CS2 using Game State Integration  
@@ -36,7 +37,6 @@ CS2-GSI-Python/
     └── stats.html                  # OBS browser source
 </pre>
 
-
 ## 🚀 Getting Started
 
 ### 1. Requirements
@@ -47,20 +47,19 @@ CS2-GSI-Python/
 
 ### 2. Install dependencies
 
-```bash
-pip install flask flask-socketio flask-cors
+<pre><code class="language-bash">pip install flask flask-socketio flask-cors</code></pre>
 
-3. Run the server
-python 1.py
+### 3. Run the server
 
-The server will listen on:
-http://127.0.0.1:3000
+<pre><code class="language-bash">python 1.py</code></pre>
 
-Create a file:
-cs2/cfg/gamestate_integration_obs.cfg
+The server will listen on: `http://127.0.0.1:3000`
 
-cfg
-"OBS Stats"
+### 4. Create Game State Integration file
+
+Create a file at: `cs2/cfg/gamestate_integration_obs.cfg`
+
+<pre><code class="language-cfg">"OBS Stats"
 {
   "uri" "http://127.0.0.1:3000/game_state"
   "timeout" "5.0"
@@ -71,13 +70,12 @@ cfg
   {
     "player_state" "1"
   }
-}
+}</code></pre>
 
 ## 📺 OBS Setup
 
 1. Add a **Browser Source**
-2. URL:
-http://127.0.0.1:3000
+2. URL: `http://127.0.0.1:3000`
 3. Set width / height as needed
 4. Enable "Refresh browser when scene becomes active" (optional)
 
@@ -91,11 +89,13 @@ http://127.0.0.1:3000
 ## ❓ FAQ
 
 ### Why are kills counted using delta?
+
 CS2 GSI reports `round_kills` repeatedly. Delta-based counting avoids duplicate increments.
 
 ### What happens if OBS or Python restarts?
+
 Stats persist and continue counting for the current day.
 
 ### Does it track Terrorist (Zombie) kills?
-No. Only CT (Human) kills and headshots are tracked by design.
 
+No. Only CT (Human) kills and headshots are tracked by design.
