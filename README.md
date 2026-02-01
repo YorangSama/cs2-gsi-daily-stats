@@ -22,10 +22,17 @@ and display them in **OBS Browser Source** with persistent local storage.
 ## 📁 Project Structure
 
 .
-├── app.py            # Flask + SocketIO GSI listener
-├── stats.json        # Local persistent stats (auto-generated)
-├── templates/
+├── 1.py            # ⭐ 主入口（唯一）
+├── LICENSE
+├── README.md
+├── gamestate.py
+├── gamestate_integration_GSI.cfg
+├── information.py
+├── payloadparser.py
+├── server.py
+├── templates
 │   └── index.html    # OBS display page
+│   └── stats.html    # OBS 浏览器源
 └── README.md
 
 ## 🚀 Getting Started
